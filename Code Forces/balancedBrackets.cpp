@@ -6,21 +6,20 @@ char flipChar(char c){
     else if(c == ']') return '[';
     else return '{';
 }
-string isBalanced(string str){
-    stack<char> s;
+bool isValid(string s){
+    stack<char> myStack;
     bool valid = true;
-    for(auto i:str){
-        if(i == '(' || i == '{' || i == '[' )
-        s.push(i);
+    for(auto i:s){
+        if(i == '(' || i == '{' || i == '[' ) myStack.push(i);
         else{
-            if(flipChar(i) != s.top() || str.empty() ){
+            if(flipChar(i) != myStack.top() || s.empty() ){
             valid = false;
             break;
             }
-            s.pop();
+            myStack.pop();
         }
     }
-    return valid ? "YES\n":"NO\n";
+    return myStack.empty();
 }
 int main(){
     ios::sync_with_stdio(false);
