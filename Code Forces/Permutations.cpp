@@ -12,8 +12,6 @@ int noOfChangesToMakePermutation(vector<int> arr,int n){
 int main(){
     int n;
     cin>>n;
-    //1 1 2 2 8 8 7 7 9 9
-    //1 2 8 7 9
     vector <int> v(n);
     for(auto &i:v)
         cin>>i;
