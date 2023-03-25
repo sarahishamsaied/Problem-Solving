@@ -1,17 +1,18 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 int main(){
     int n;
     cin>>n;
     vector <int> v(n);
+    map <int,int> frequencyMap;
     int ans = 0;
-    for(auto & i:v) cin>>i;
-    sort(v.begin(),v.end());
-    int max = v[n-1];
-    for (int i = 0; i < n; i++){
-        if(v[i] == max) ans++;       
+    for(auto & i:v) {cin>>i; frequencyMap[i]++;}
+    for (auto i : frequencyMap){
+        cout<<i.first<<" ->"<<i.second<<endl;
+        if(i.second > ans)
+            ans = i.second;
     }
     cout<<ans<<endl;
 }
