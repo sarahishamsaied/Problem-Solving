@@ -10,7 +10,6 @@ int main(){
     int ans = 0;
     for(auto & i:v) {cin>>i; frequencyMap[i]++;}
     for (auto i : frequencyMap){
-        cout<<i.first<<" ->"<<i.second<<endl;
         if(i.second > ans)
             ans = i.second;
     }
