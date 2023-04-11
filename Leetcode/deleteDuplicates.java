@@ -1,3 +1,8 @@
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) { val = x; }
+}
 class Solution {
     public static ListNode deleteDuplicates(ListNode head){
          ListNode curr = head;
