@@ -1,1 +1,3 @@
-print(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10],[1, 6, -1, 10]))
+class Solution:
+    def sortedSquares(self, nums):
+        return sorted([i*i for i in nums])
