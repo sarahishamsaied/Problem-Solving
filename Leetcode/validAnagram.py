@@ -6,18 +6,20 @@ class Solution(object):
         :rtype: bool
         """
         compareMap = {}
-        if(len(s) < len(t)):
-            return False
         for i in range (len(s)):
             if(compareMap.get(s[i]) == None):
                 compareMap[s[i]] = 1
             else:
                 compareMap[s[i]] += 1
         for i in range(len(t)):
-            if(compareMap.get(t[i]) == None):
+            if(compareMap.get(t[i]) == None or compareMap[t[i]] == 0):
                 return False
             else:
                 compareMap[t[i]] -= 1
+        for key in compareMap:
+            if(compareMap[key] != 0):
+                return False
+        return True
 
 
 
