@@ -17,8 +17,6 @@ def smallestDifference(arrayOne, arrayTwo):
             b+=1
         else:
             return [arrayOne[a], arrayTwo[b]]
-
-
     return smallestPair
 if __name__ == "__main__":
     arrayOne = [-1, 5, 10, 20, 28, 3]

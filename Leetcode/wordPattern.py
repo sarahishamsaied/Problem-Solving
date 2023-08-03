@@ -5,7 +5,6 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-
         patternMap = {}
         wordsArr = s.split()
         if(len(pattern) != len(wordsArr)):
